@@ -1,16 +1,85 @@
-﻿* {
+﻿:root {
+  --blue: hsl(202, 100%, 57%);
+  --white: white;
+  --black: #333;
+  --swhite: #fff;
+  --sswhite: #f1f1f1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--swhite);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+.nav-icon:hover {
+  color: var(--swhite);
+  background-color: var(--blue);
+  border-radius: 5px;
+  transform: scale(1.05);
+  cursor: none;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--white);
+}
+
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Cairo", sans-serif;
 }
+.nav-icon {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--blue);
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+.nav-icon a {
+  color: var(--blue);
+  text-decoration: none;
+}
+.nav-icon a:hover {
+  color: var(--white);
+  background-color: var(--blue);
+  border-radius: 5px;
+  transform: scale(1.05);
+}
 
+/* Space for fixed nav */
 .boxsaiz {
   width: 100%;
   height: 95px;
   background-color: var(--sswhite);
 }
 
+/* Filter Section */
 .cont_fulter {
   display: flex;
   justify-content: center;
@@ -48,6 +117,7 @@
   border: 2px solid var(--blue);
 }
 
+/* Card Container */
 .cont {
   display: flex;
   flex-wrap: wrap;
@@ -56,10 +126,10 @@
   padding: 20px;
 }
 
+/* Developer Card */
 .card_box {
-  flex: 1 1 300px;
-  max-width: 320px;
-  min-height: 440px;
+  width: 100%;
+  max-width: 350px;
   background-color: var(--swhite);
   border-radius: 20px;
   padding: 20px;
@@ -68,7 +138,6 @@
   align-items: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-  overflow: hidden;
 }
 
 .card_box:hover {
@@ -76,6 +145,7 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Image Placeholder */
 .img_p {
   width: 100%;
   padding-top: 75%; /* Aspect ratio */
@@ -85,12 +155,12 @@
   margin-bottom: 15px;
 }
 
+/* Card Content */
 .card_box h2 {
   font-size: 20px;
   margin: 10px 0;
   text-align: center;
   color: var(--black);
-  word-wrap: break-word;
 }
 
 .p_spec {
@@ -98,7 +168,6 @@
   font-weight: bold;
   color: var(--blue);
   text-align: center;
-  word-wrap: break-word;
 }
 
 .card_box p {
@@ -107,7 +176,6 @@
   color: #555;
   line-height: 1.5;
   margin: 10px 0;
-  word-wrap: break-word;
 }
 
 .sp_datetime {
@@ -117,6 +185,7 @@
   color: var(--black);
 }
 
+/* Booking Button */
 .bt_sh {
   width: 70px;
   height: 34px;
@@ -133,16 +202,14 @@
   color: var(--white);
 }
 
+/* Responsive Layout */
 @media (max-width: 768px) {
   .cont {
     padding: 10px;
   }
 
   .card_box {
-    flex: 1 1 100%;
-    max-width: 95%;
-    min-height: auto;
-    padding: 18px;
+    max-width: 100%;
   }
 
   .bt_d {
@@ -160,7 +227,6 @@
 
   .card_box {
     padding: 15px;
-    min-width: 90%;
   }
 
   .img_p {
@@ -175,28 +241,9 @@
     font-size: 14px;
   }
 
-  .p_spec,
-  .card_box p {
-    font-size: 14px;
-  }
-
   .bt_sh {
     width: 60px;
     height: 30px;
     font-size: 14px;
-  }
-}
-
-@media (max-width: 400px) {
-  .card_box {
-    padding: 12px;
-  }
-
-  .card_box h2 {
-    font-size: 16px;
-  }
-
-  .sp_datetime {
-    font-size: 13px;
   }
 }
