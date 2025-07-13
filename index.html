@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="css/homecss.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Gulzar&family=Jomhuria&family=Open+Sans:ital,wght@1,300&family=Roboto+Condensed:ital,wght@0,900;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-icon">منجز</div>
+      <div class="search-wrapper">
+        <div class="search-container">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="ابحث عن الخدمات..."
+          />
+          <!-- <button id="search-btn" class="hidden-btn">بحث</button> -->
+        </div>
+      </div>
+      <div class="nav-links">
+        <ul class="list-links">
+          <li><a href="reservpage.html">الحجوزات</a></li>
+          <li><a id="openFormBtn" style="cursor: pointer">اضافة خدمة</a></li>
+          <li><a href="#" id="open-login">تسجيل الدخول</a></li>
+          <li class="signup"><a href="#" id="open-signup">انشاء حساب</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header>
+      <h1 class="title">مُنْجَزْ</h1>
+      <p class="subtitle">انجز اعمالك اسرع</p>
+    </header>
+
+    <section class="about">
+      <h2>لماذا تختار منصة منجز؟</h2>
+      <div class="divider"></div>
+
+      <p>
+        منصة "منجز" توفر لك حلولاً شاملة لجميع احتياجاتك اليومية والمهنية. سواء
+        كنت تبحث عن خدمات تقنية مثل تطوير المواقع والبرمجيات، أو خدمات مهنية مثل
+        الاستشارات القانونية والمالية، أو حتى خدمات منزلية مثل النظافة
+        والتصليحات، ستجد بين أيدينا فريقاً من المحترفين المتميزين القادرين على
+        إنجاز مهامك بدقة وسرعة. نفتخر بتقديم خدمات عالية الجودة تغطي جميع جوانب
+        حياتك، بدءاً من احتياجاتك الشخصية وصولاً إلى متطلبات عملك، كل ذلك بنظام
+        حجز سهل وضمان لجودة الخدمة.
+      </p>
+    </section>
+
+    <main class="services">
+      <h3>خدماتنا</h3>
+      <div class="divider"></div>
+
+      <div id="cards-container"></div>
+    </main>
+
+    <div class="developers-section">
+      <h2 class="section-title" style="text-align: center">مطوروا الموقع</h2>
+      <div class="divider"></div>
+      <ul class="developers-list">
+        <li>
+          <i class="fab fa-telegram telegram-icon"></i>
+          <a href="https://t.me/IDarbok" target="_blank"
+            >إبراهيم عبدالكريم دربوك</a
+          >
+        </li>
+        <li>
+          <i class="fab fa-telegram telegram-icon"></i>
+          <a href="https://t.me/Ali_Aweed" target="_blank"
+            >علي صالح محمد بن عبد الكريم
+          </a>
+        </li>
+        <li>
+          <i class="fab fa-telegram telegram-icon"></i>
+          <a href="https://t.me/A_Alshareef02" target="_blank"
+            >أنس احمدالشريف</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Add Service Dialog -->
+    <dialog id="light">
+      <form id="addform" method="dialog">
+        <label>الاسم:</label><br />
+        <input id="uname" type="text" placeholder="اسم مقدم الخدمه" /><br />
+
+        <label>المجال:</label><br />
+        <select id="field" required>
+          <option value="">اختر المجال</option>
+          <option value="طب">طب</option>
+          <option value="برمجة">برمجة</option>
+          <option value="انشاء">انشاء</option>
+          <option value="تعليم">تعليم</option></select
+        ><br />
+
+        <label id="chapter">التخصص:</label><br />
+        <select id="fielddoc" required>
+          <option value="">اختر التخصص</option>
+          <option value="اطفال">اطفال</option>
+          <option value="جراحة عامة">جراحة عامة</option>
+          <option value="قلب">قلب</option>
+          <option value="عظام">عظام</option>
+          <option value="مخ واعصاب">مخ واعصاب</option>
+        </select>
+
+        <select id="fieldpro" required>
+          <option value="">اختر التخصص</option>
+          <option value="منظومات">منظومات</option>
+          <option value="ويب">ويب</option>
+          <option value="تطبيقات">تطبيقات</option>
+          <option value="قواعد بيانات">قواعد بيانات</option>
+        </select>
+
+        <select id="fieldeng" required>
+          <option value="">اختر التخصص</option>
+          <option value="تصميم الديكورات">تصميم الديكورات</option>
+          <option value="كهرباء">كهرباء</option>
+          <option value="بناء">بناء</option>
+          <option value="سباكة">سباكة</option>
+        </select>
+
+        <select id="fieldteach" required>
+          <option value="">اختر التخصص</option>
+          <option value="رياضيات">رياضيات</option>
+          <option value="فيزياء">فيزياء</option>
+          <option value="كيمياء">كيمياء</option>
+          <option value="اللغةالعربية">اللغةالعربية</option>
+          <option value="اللغةالانجليزية">اللغةالانجليزية</option></select
+        ><br />
+
+        <input id="dec" type="text" placeholder="الوصف" /><br />
+        <label>رابط الصورة (اختياري):</label><br />
+        <input type="file" id="imgg" placeholder="اضف صورتك" /><br />
+
+        <label>التوقيت</label><br />
+        <input id="dateti" type="text" placeholder="8.00-10.30" /><br />
+
+        <div class="dialog-buttons">
+          <button id="bt_send">اضافة</button>
+          <button id="bt_close">اغلاق</button>
+        </div>
+      </form>
+    </dialog>
+
+    <!-- Auth Dialog -->
+    <dialog id="auth-dialog">
+      <div id="dialog-content" class="auth-container login-mode">
+        <div class="auth-wrapper">
+          <div class="auth-form" id="login-form">
+            <h2>تسجيل الدخول</h2>
+            <p>مرحبًا بعودتك! الرجاء إدخال بياناتك</p>
+            <form>
+              <input
+                type="email"
+                id="email"
+                placeholder="البريد الإلكتروني"
+                required
+              />
+              <div class="password-container">
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="كلمة المرور"
+                  required
+                />
+                <span class="toggle-password">
+                  <img
+                    src="closed-eye.png"
+                    alt="أيقونة العين"
+                    onclick="togglePassword('password')"
+                  />
+                </span>
+              </div>
+              <div class="forgot-password">
+                <a href="#">هل نسيت كلمة المرور؟</a>
+              </div>
+              <button type="submit" style="margin-bottom: 30px" class="auth">
+                تسجيل الدخول
+              </button>
+            </form>
+            <p>
+              لا تملك حسابًا؟
+              <span id="switch-to-signup" class="toggle-span">سجّل الآن</span>
+            </p>
+            <div class="separator">-------- أو --------</div>
+            <div class="social-login">
+              <button class="google-login">
+                <i class="fab fa-google"></i> المتابعة مع Google
+              </button>
+              <button class="facebook-login">
+                <i class="fab fa-facebook-f"></i> المتابعة مع Facebook
+              </button>
+            </div>
+          </div>
+
+          <div class="auth-form" id="signup-form" style="display: none">
+            <h2>التسجيل</h2>
+            <p>اختر أفضل خدمة لتقديمها وابدأ رحلتك</p>
+            <form>
+              <input
+                type="email"
+                id="signup-email"
+                placeholder="البريد الإلكتروني"
+                required
+              />
+              <div class="password-container">
+                <input
+                  type="password"
+                  id="signup-password"
+                  placeholder="كلمة المرور"
+                  required
+                />
+                <span class="toggle-password">
+                  <img
+                    src="closed-eye.png"
+                    alt="أيقونة العين"
+                    onclick="togglePassword('signup-password')"
+                  />
+                </span>
+              </div>
+              <div class="password-container">
+                <input
+                  type="password"
+                  id="confirm-password"
+                  placeholder="تأكيد كلمة المرور"
+                  required
+                />
+                <span class="toggle-password">
+                  <img
+                    src="closed-eye.png"
+                    alt="أيقونة العين"
+                    onclick="togglePassword('confirm-password')"
+                  />
+                </span>
+              </div>
+              <label class="checkbox-label">
+                <input type="checkbox" id="terms" /> أقدّم خدمة
+              </label>
+              <button type="submit" style="margin-bottom: 30px" class="auth">
+                سجّل
+              </button>
+            </form>
+            <p>
+              لديك حساب بالفعل؟
+              <span id="switch-to-login" class="toggle-span">تسجيل الدخول</span>
+            </p>
+            <div class="separator">-------- أو --------</div>
+            <div class="social-login">
+              <button class="google-login">
+                <i class="fab fa-google"></i> المتابعة مع Google
+              </button>
+              <button class="facebook-login">
+                <i class="fab fa-facebook-f"></i> المتابعة مع Facebook
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="auth-image">
+          <img src="services.png" alt="صورة الخدمات" />
+        </div>
+      </div>
+    </dialog>
+
+    <footer>
+      <div>© 2025 منصة منجز. جميع الحقوق محفوظة</div>
+      <div><a href="">تواصل مع فريقنا</a></div>
+    </footer>
+
+    <script src="js/homepage.js"></script>
+  </body>
+</html>
