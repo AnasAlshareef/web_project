@@ -1,13 +1,19 @@
 ﻿const authDialog = document.getElementById("auth-dialog");
 const dialogContent = document.getElementById("dialog-content");
+const loginForm = document.getElementById("login-form");
+const signupForm = document.getElementById("signup-form");
 
 document.getElementById("open-login").onclick = (e) => {
   e.preventDefault();
+  loginForm.style.display = "block";
+  signupForm.style.display = "none";
   authDialog.showModal();
 };
 
 document.getElementById("open-signup").onclick = (e) => {
   e.preventDefault();
+  loginForm.style.display = "none";
+  signupForm.style.display = "block";
   authDialog.showModal();
 };
 
